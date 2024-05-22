@@ -9,8 +9,7 @@ services:
     restart: always
     network_mode: host
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/Amsterdam
     volumes:
-      - "./pulse/cfg:/etc/asterisk:ro"
       - "astdb:/var/lib/asterisk/db"
       - "voicemail:/var/spool/asterisk/voicemail"
