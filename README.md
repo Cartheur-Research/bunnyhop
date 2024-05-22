@@ -17,4 +17,4 @@ Bunnyhop is a form of skill-based movement that's been present in many games and
 
 _Development status_
 
-Container running, errors with `conf` files.
+Container running.
