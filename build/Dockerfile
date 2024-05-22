@@ -12,8 +12,8 @@ RUN set -ex; \
         libedit-dev libjansson-dev libsqlite3-dev uuid-dev libxml2-dev  \
         liburiparser1 libgsm1 libcurl4-openssl-dev; \
     cd /usr/src; \
-    wget "https://github.com/asterisk/asterisk/archive/refs/tags/${AST_VERSION}.tar.gz"; \
-    tar xvf ${AST_VERSION}.tar.gz; \
+    wget "https://github.com/asterisk/asterisk/releases/download/${AST_VERSION}/asterisk-${AST_VERSION}.tar.gz"; \
+    tar xvf asterisk-${AST_VERSION}.tar.gz; \
     cd asterisk-${AST_VERSION}*/; \
     ./configure --disable-xmldoc --without-libxslt --without-dahdi ; \
     make menuselect/menuselect menuselect-tree menuselect.makeopts; \
