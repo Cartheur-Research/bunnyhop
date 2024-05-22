@@ -231,9 +231,10 @@ RUN set -ex; \
     wget "http://asterisk.hosting.lv/bin/codec_g729-ast180-gcc4-glibc-x86_64-core2-sse4.so"  \
     -O /usr/lib/asterisk/modules/codec_g729.so;
 
-COPY conf/extensions.conf /etc/asterisk
 COPY conf/ari.conf /etc/asterisk
+COPY conf/extensions.conf /etc/asterisk
 COPY conf/http.conf /etc/asterisk
+COPY conf/modules.conf /etc/asterisk
 COPY conf/sip.conf /etc/asterisk
 # if need curl for Global Web
 # RUN set -ex; \
