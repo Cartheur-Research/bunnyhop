@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  asterisk:
-    build:
-      context: .
-      dockerfile: asterisk-pod.Dockerfile
-    ports:
-    - "5060:80"
