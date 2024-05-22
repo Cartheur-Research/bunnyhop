@@ -1,10 +1,10 @@
 # Asterisk for Kubernetes
 
-FROM debian:stretch as builder
-MAINTAINER C.A.Tucker "cartheur@pm.me"
+FROM debian:bullseye as builder
+LABEL C.A.Tucker "cartheur@pm.me"
 
 # Choose the version to install
-ENV ASTERISK_VER 17.5.1
+ENV ASTERISK_VER 21.3.1
 
 # Install Asterisk
 RUN apt-get update && \
@@ -34,7 +34,7 @@ RUN cd /tmp/asterisk-${ASTERISK_VER} &&\
    make samples && \
    rm -Rf /tmp/*
 
-FROM debian:stretch
+FROM debian:bullseye
 COPY --from=builder /usr/sbin/asterisk /usr/sbin/
 COPY --from=builder /usr/sbin/safe_asterisk /usr/sbin/
 COPY --from=builder /usr/lib/libasterisk* /usr/lib/
