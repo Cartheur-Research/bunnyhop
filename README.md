@@ -13,8 +13,9 @@ Bunnyhop is a form of skill-based movement that's been present in many games and
 
 ### Running asterisk
 
-`cd host`
-`docker-compose up`
+* `cd host`
+* `docker-compose up`
+* `docker run -it cartheur/asterisk`
 
 _Development status_
 
