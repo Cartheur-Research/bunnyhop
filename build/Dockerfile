@@ -19,8 +19,8 @@ RUN set -ex; \
     make menuselect/menuselect menuselect-tree menuselect.makeopts; \
     menuselect/menuselect --disable BUILD_NATIVE menuselect.makeopts; \
     menuselect/menuselect --enable codec_g729a menuselect.makeopts; \
-    echo "ENABLE chan_sip"; \
-    menuselect/menuselect --enable chan_sip menuselect.makeopts; \
+    echo "ENABLE chan_pjsip"; \
+    menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
     echo "disable deprecated modules/apps"; \
     menuselect/menuselect --disable res_adsi menuselect.makeopts; \
     menuselect/menuselect --disable app_adsiprog menuselect.makeopts; \
