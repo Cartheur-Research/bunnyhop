@@ -8,4 +8,5 @@ Bunnyhop is a form of skill-based movement that's been present in many games and
 
 ### Building asterisk
 
+`cd build`
 `docker build -t cartheur/asterisk .`
