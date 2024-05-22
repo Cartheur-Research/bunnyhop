@@ -4,8 +4,8 @@ ENV DEBIAN_FRONTEND="noninteractive"
 ENV AST_VERSION 21.3.1
 
 RUN set -ex; \
-    apt-get update; \
-    apt-get install -y --no-install-recommends \
+    apt update; \
+    apt install -y --no-install-recommends \
         software-properties-common \
         build-essential pkg-config \
         wget subversion bzip2 patch \
@@ -187,19 +187,19 @@ RUN set -ex; \
     make install; \
     make samples; \
     make config; \
-    apt-get remove -y --purge --auto-remove build-essential software-properties-common lib*dev; \
-    apt-get clean && rm -rf /var/lib/{apt,dpkg,cache,log}; \
+    apt remove -y --purge --auto-remove build-essential software-properties-common lib*dev; \
+    apt clean && rm -rf /var/lib/{apt,dpkg,cache,log}; \
     rm -rf /usr/src/${AST_VERSION}* && rm -rf /usr/src/asterisk*;
 
 
 FROM debian:bullseye-slim
 RUN set -ex; \
-    apt-get update; \
+    apt update; \
     export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true; \
-    apt-get install -y --no-install-recommends  \
+    apt install -y --no-install-recommends  \
        wget tzdata libedit2 libjansson4 libsqlite3-0 libuuid1 libxml2  \
        liburiparser1 libgsm1 libcurl4; \
-    apt-get clean && rm -rf /var/lib/{apt,dpkg,cache,log};
+    apt clean && rm -rf /var/lib/{apt,dpkg,cache,log};
 
 COPY --from=builder /var/spool/asterisk /var/spool/asterisk
 COPY --from=builder /var/lib/asterisk /var/lib/asterisk
@@ -230,13 +230,13 @@ RUN set -ex; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     wget "http://asterisk.hosting.lv/bin/codec_g729-ast180-gcc4-glibc-x86_64-core2-sse4.so"  \
     -O /usr/lib/asterisk/modules/codec_g729.so;
-    
+
 COPY conf/extensions.conf /etc/asterisk
 COPY conf/ari.conf /etc/asterisk
 COPY conf/http.conf /etc/asterisk
 COPY conf/sip.conf /etc/asterisk
 # if need curl for Global Web
 # RUN set -ex; \
-#     apt-get install -y --no-install-recommends ca-certificates;
+#     apt install -y --no-install-recommends ca-certificates;
 
 CMD [ "asterisk", "-f" ]
