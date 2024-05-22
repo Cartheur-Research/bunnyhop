@@ -6,12 +6,14 @@ _Background_
 
 Bunnyhop is a form of skill-based movement that's been present in many games and game engines since before 2000. It's performed by repeating jumps in order to gain velocities higher than are possible by normal movement.
 
-### Building asterisk
+_Strategy_
+
+Use VSCode to build the asterisk image:
 
 `cd build`
 `docker build -t cartheur/asterisk .`
 
-### Running asterisk
+And a terminal to run the container
 
 * `cd host`
 * `docker-compose up`
@@ -19,4 +21,4 @@ Bunnyhop is a form of skill-based movement that's been present in many games and
 
 _Development status_
 
-Container running.
+Container running without errors or warnings.
