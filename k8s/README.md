@@ -5,3 +5,7 @@ Asterisk is better with k8s, so setting up a rig to manage the entirety. First-o
 ### Prometheus commands
 
 Use `docker-compose up`
+
+### Grafana dashboard
+
+Use `docker volume create grafana-data`
