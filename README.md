@@ -1,6 +1,6 @@
 ## bunnyhop secure conferencing
 
-Audio/Video streaming meeting software that is secure and encrypted end-to-end.
+Audio/Video streaming meeting software that is secure and encrypted end-to-end. For our use-case, it is important to have meetings with clients in a secure manner so that sensitive IP and other matters is not prone to leakage. This gives a greater confidence in delivery of our products and services.
 
 _Background_
 
