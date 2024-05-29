@@ -1,3 +1,6 @@
+[![GitHub license](https://img.shields.io/github/license/cartheur-research/bunnyhop)](https://github.com/cartheur-research/bunnyhop/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/cartheur-research/bunnyhop)](https://github.com/cartheur-research/bunnyhop/issues)
+
 ## bunnyhop secure conferencing
 
 Audio/Video streaming meeting software that is secure and encrypted end-to-end. For our use-case, it is important to have meetings with clients in a secure manner so that sensitive IP and other matters is not prone to leakage. This gives a greater confidence in delivery of our products and services.
