@@ -25,3 +25,17 @@ services:
       - "9093"
     ports:
       - 9093:9093
+
+  grafana:
+    build:
+      context: ./grafana
+    container_name: grafana
+    ports:
+      - 8000:3000
+    volumes:
+      - grafana-data:/var/lib/grafana
+
+volumes:
+  grafana-data:
+    external: true 
+  
