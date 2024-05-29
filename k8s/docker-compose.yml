@@ -1,4 +1,15 @@
 services:
+  asterisk:
+    image: cartheur/asterisk
+    container_name: asterisk
+    restart: always
+    network_mode: host
+    environment:
+      - TZ=Europe/Amsterdam
+    volumes:
+      - "astdb:/var/lib/asterisk/db"
+      - "voicemail:/var/spool/asterisk/voicemail"
+  
   prometheus:
     restart: always
     image: prom/prometheus:v2.52.0
@@ -36,6 +47,8 @@ services:
       - grafana-data:/var/lib/grafana
 
 volumes:
+  astdb:
+  voicemail:
   grafana-data:
     external: true 
   

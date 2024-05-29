@@ -1,6 +1,10 @@
-## The k8s rig
+## The asterisk k8s rig
 
-Asterisk is better with k8s, so setting up a rig to manage the entirety. First-off, need a Prometheus monitor.
+Asterisk is better with k8s, so setting up a rig to manage the entirety.
+
+### Build custom asterisk
+
+`docker build -t cartheur/asterisk .`
 
 ### Prometheus commands
 
