@@ -6,10 +6,11 @@ Asterisk is better with k8s, so setting up a rig to manage the entirety.
 
 `docker build -t cartheur/asterisk .`
 
-### Prometheus commands
+### Manually create a volume on the first-go
 
-Use `docker-compose up`
+`docker volume create grafana-data`
 
-### Grafana dashboard
+### Launch the rig
 
-Use `docker volume create grafana-data`
+* `cd k8s`
+* `docker-compose up`
