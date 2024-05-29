@@ -2,8 +2,8 @@
 
 Use VSCode or cmder to build the asterisk image:
 
-`cd build`
-`docker build -t cartheur/asterisk .`
+* `cd build`
+* `docker build -t cartheur/asterisk .`
 
 Navigate to the [k8s](/k8s/README.md) directory to run it in conjunction with:
 
