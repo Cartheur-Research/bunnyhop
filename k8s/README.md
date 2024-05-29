@@ -1,16 +1,20 @@
 ## The asterisk k8s rig
 
-Asterisk is better with k8s, so setting up a rig to manage the entirety.
+Asterisk is better with k8s, since we can manage its resources and state using autonomous tools.
 
-### Build custom asterisk
+### Post-Build asterisk and monitoring
 
-`docker build -t cartheur/asterisk .`
-
-### Manually create a volume on the first-go
+After having built the asterisk image, prepare monitoring by manually-creating the Grafana volume as a part of the setup:
 
 `docker volume create grafana-data`
 
-### Launch the rig
+Now you are ready to launch the system:
 
 * `cd k8s`
 * `docker-compose up`
+
+Configure the ports in the `yaml` files in the appropriate places.
+
+_Final steps_
+
+Enjoy secure communication.
