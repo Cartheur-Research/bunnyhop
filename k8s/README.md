@@ -17,4 +17,5 @@ Configure the ports in the `yaml` files in the appropriate places.
 
 _Final steps_
 
-Enjoy secure communication.
+* Todo: Asterisk client setup and configuration.
+* Enjoy secure communication.
