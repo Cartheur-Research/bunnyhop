@@ -1,5 +1,5 @@
 groups:
-    - name: example_alerts
+    - name: cpu_utilization_alert
       rules:
       - alert: HighCPUUtilization
         expr: avg(node_cpu{mode="system"}) > 80
