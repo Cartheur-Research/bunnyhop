@@ -15,4 +15,4 @@ Bunnyhop uses [asterisk](https://github.com/Cartheur-Research/asterisk) to perfo
 
 _Development status_
 
-Kuberentes system running without errors or warnings. Next step is to configure around asterisk.
+Kuberentes system running without errors or warnings. Next step is to configure the callers for asterisk.
