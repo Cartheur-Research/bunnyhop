@@ -138,20 +138,20 @@ RUN set -ex; \
     echo "enable chan_pjsip"; \
     menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
     echo "disable all pjsip"; \
-    menuselect/menuselect --disable res_pjsip menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_session menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_history menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_dtmf_info menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_transport_websocket menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_xpidf_body_generator menuselect.makeopts; \
-    menuselect/menuselect --disable res_prometheus menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_pidf_body_generator menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_mwi_body_generator menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_empty_info menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_rfc3329 menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_session menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_history menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_dtmf_info menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_transport_websocket menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_xpidf_body_generator menuselect.makeopts; \
+    menuselect/menuselect --enable res_prometheus menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_pidf_body_generator menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_mwi_body_generator menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_empty_info menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_rfc3329 menuselect.makeopts; \
     menuselect/menuselect --disable func_pjsip_endpoint menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_messaging menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_notify menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_messaging menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_notify menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_t38 menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_diversion menuselect.makeopts; \
     menuselect/menuselect --disable func_pjsip_aor menuselect.makeopts; \
