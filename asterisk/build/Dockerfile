@@ -17,7 +17,7 @@ RUN set -ex; \
     cd asterisk-${AST_VERSION}*/; \
     ./configure --disable-xmldoc --without-libxslt --without-dahdi ; \
     make menuselect/menuselect menuselect-tree menuselect.makeopts; \
-    menuselect/menuselect --enable BUILD_NATIVE menuselect.makeopts; \
+    menuselect/menuselect --disable BUILD_NATIVE menuselect.makeopts; \
     menuselect/menuselect --disable codec_g729a menuselect.makeopts; \
     echo "disable deprecated modules/apps"; \
     menuselect/menuselect --disable res_adsi menuselect.makeopts; \
@@ -67,7 +67,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_xmpp menuselect.makeopts; \
     menuselect/menuselect --disable res_stir_shaken menuselect.makeopts; \
     menuselect/menuselect --disable res_ael_share menuselect.makeopts; \
-    menuselect/menuselect --enable res_parking menuselect.makeopts; \
+    menuselect/menuselect --disable res_parking menuselect.makeopts; \
     menuselect/menuselect --disable res_agi menuselect.makeopts; \
     menuselect/menuselect --disable res_calendar_caldav menuselect.makeopts; \
     menuselect/menuselect --disable res_aeap menuselect.makeopts; \
