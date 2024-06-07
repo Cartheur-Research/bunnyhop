@@ -17,10 +17,8 @@ RUN set -ex; \
     cd asterisk-${AST_VERSION}*/; \
     ./configure --disable-xmldoc --without-libxslt --without-dahdi ; \
     make menuselect/menuselect menuselect-tree menuselect.makeopts; \
-    menuselect/menuselect --disable BUILD_NATIVE menuselect.makeopts; \
-    menuselect/menuselect --enable codec_g729a menuselect.makeopts; \
-    echo "ENABLE chan_pjsip"; \
-    menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
+    menuselect/menuselect --enable BUILD_NATIVE menuselect.makeopts; \
+    menuselect/menuselect --disable codec_g729a menuselect.makeopts; \
     echo "disable deprecated modules/apps"; \
     menuselect/menuselect --disable res_adsi menuselect.makeopts; \
     menuselect/menuselect --disable app_adsiprog menuselect.makeopts; \
@@ -138,26 +136,26 @@ RUN set -ex; \
     echo "enable chan_pjsip"; \
     menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
     echo "disable all pjsip"; \
-    menuselect/menuselect --enable res_pjsip menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_session menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_history menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_dtmf_info menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_transport_websocket menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_xpidf_body_generator menuselect.makeopts; \
-    menuselect/menuselect --enable res_prometheus menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_pidf_body_generator menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_mwi_body_generator menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_session menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_history menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_dtmf_info menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_transport_websocket menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_xpidf_body_generator menuselect.makeopts; \
+    menuselect/menuselect --disable res_prometheus menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_pidf_body_generator menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_mwi_body_generator menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_empty_info menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_rfc3329 menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_rfc3329 menuselect.makeopts; \
     menuselect/menuselect --disable func_pjsip_endpoint menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_messaging menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_messaging menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_notify menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_t38 menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_diversion menuselect.makeopts; \
     menuselect/menuselect --disable func_pjsip_aor menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_pidf_digium_body_supplement menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_pidf_eyebeam_body_supplement menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_sips_contact menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_sips_contact menuselect.makeopts; \
     menuselect/menuselect --disable func_pjsip_contact menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_dlg_options menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_refer menuselect.makeopts; \
@@ -169,21 +167,21 @@ RUN set -ex; \
     menuselect/menuselect --disable res_pjsip_send_to_voicemail menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_endpoint_identifier_user menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_dialog_info_body_generator menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_outbound_registration menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_outbound_registration menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_nat menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_publish_asterisk menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_outbound_publish menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_publish_asterisk menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_outbound_publish menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_pubsub menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_endpoint_identifier_ip menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_endpoint_identifier_ip menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_registrar menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_header_funcs menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_header_funcs menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_outbound_authenticator_digest menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_acl menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_phoneprov_provider menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_authenticator_digest menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_exten_state menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_rfc3326 menuselect.makeopts; \
-    menuselect/menuselect --enable res_pjsip_logger menuselect.makeopts; \
+    menuselect/menuselect --disable res_pjsip_logger menuselect.makeopts; \
     make; \
     make install; \
     make samples; \
