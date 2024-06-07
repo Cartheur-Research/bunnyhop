@@ -230,7 +230,12 @@ RUN set -ex; \
     echo $TZ > /etc/timezone; \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime; \
     wget "http://asterisk.hosting.lv/bin/codec_g729-ast180-gcc4-glibc-x86_64-core2-sse4.so"  \
-    -O /usr/lib/asterisk/modules/codec_g729.so;
+    -O /usr/lib/asterisk/modules/codec_g729.so; \
+    touch /root/.asterisk_history \
+    touch .asterisk_history
+
+RUN chmod -R +x /root/.asterisk_history
+RUN chmod -R +x .asterisk_history
 
 COPY conf/ari.conf /etc/asterisk
 COPY conf/extensions.conf /etc/asterisk
