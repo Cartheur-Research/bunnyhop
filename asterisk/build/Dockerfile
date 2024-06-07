@@ -135,8 +135,9 @@ RUN set -ex; \
     menuselect/menuselect --disable app_directed_pickup menuselect.makeopts; \
     menuselect/menuselect --disable app_morsecode menuselect.makeopts; \
     menuselect/menuselect --disable app_sendtext menuselect.makeopts; \
+    echo "enable chan_pjsip"; \
+    menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
     echo "disable all pjsip"; \
-    menuselect/menuselect --disable chan_pjsip menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_session menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_history menuselect.makeopts; \
