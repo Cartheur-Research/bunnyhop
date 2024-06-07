@@ -195,9 +195,10 @@ RUN set -ex; \
 FROM debian:bullseye-slim
 RUN set -ex; \
     apt update; \
+    export alias 'asterisk=/etc/asterisk' >> /root/.bashrc \
     export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true; \
     apt install -y --no-install-recommends  \
-       wget tzdata libedit2 libjansson4 libsqlite3-0 libuuid1 libxml2  \
+       wget tzdata libedit2 libjansson4 libsqlite3-0 libuuid1 libxml2 nano  \
        liburiparser1 libgsm1 libcurl4; \
     apt clean && rm -rf /var/lib/{apt,dpkg,cache,log};
 
