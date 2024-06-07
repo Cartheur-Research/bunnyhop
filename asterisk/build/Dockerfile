@@ -47,7 +47,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_config_sqlite3 menuselect.makeopts; \
     menuselect/menuselect --disable res_config_pgsql menuselect.makeopts; \
     menuselect/menuselect --disable func_db menuselect.makeopts; \
-    menuselect/menuselect --disable res_sorcery_astdb menuselect.makeopts; \
+    menuselect/menuselect --enable res_sorcery_astdb menuselect.makeopts; \
     menuselect/menuselect --disable pbx_realtime menuselect.makeopts; \
     echo "disable unused codec"; \
     menuselect/menuselect --disable codec_ilbc menuselect.makeopts; \
@@ -76,7 +76,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_phoneprov menuselect.makeopts; \
     menuselect/menuselect --disable res_config_ldap menuselect.makeopts; \
     menuselect/menuselect --disable res_smdi menuselect.makeopts; \
-    menuselect/menuselect --disable res_sorcery_memory_cache menuselect.makeopts; \
+    menuselect/menuselect --enable res_sorcery_memory_cache menuselect.makeopts; \
     menuselect/menuselect --disable res_calendar_ews menuselect.makeopts; \
     menuselect/menuselect --disable res_calendar_icalendar menuselect.makeopts; \
     menuselect/menuselect --disable res_http_media_cache menuselect.makeopts; \
@@ -86,7 +86,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_hep menuselect.makeopts; \
     menuselect/menuselect --disable res_statsd menuselect.makeopts; \
     menuselect/menuselect --disable res_stun_monitor menuselect.makeopts; \
-    menuselect/menuselect --disable res_sorcery_realtime menuselect.makeopts; \
+    menuselect/menuselect --enable res_sorcery_realtime menuselect.makeopts; \
     menuselect/menuselect --disable pbx_lua menuselect.makeopts; \
     menuselect/menuselect --disable pbx_ael menuselect.makeopts; \
     menuselect/menuselect --disable pbx_spool menuselect.makeopts; \
@@ -103,7 +103,7 @@ RUN set -ex; \
     menuselect/menuselect --disable func_cut menuselect.makeopts; \
     menuselect/menuselect --disable func_enum menuselect.makeopts; \
     menuselect/menuselect --disable func_dialgroup menuselect.makeopts; \
-    menuselect/menuselect --disable func_sorcery menuselect.makeopts; \
+    menuselect/menuselect --enable func_sorcery menuselect.makeopts; \
     menuselect/menuselect --disable func_presencestate menuselect.makeopts; \
     menuselect/menuselect --disable func_math menuselect.makeopts; \
     menuselect/menuselect --disable func_periodic_hook menuselect.makeopts; \
@@ -136,13 +136,13 @@ RUN set -ex; \
     echo "enable chan_pjsip"; \
     menuselect/menuselect --enable chan_pjsip menuselect.makeopts; \
     echo "disable all pjsip"; \
-    menuselect/menuselect --disable res_pjsip menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_session menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_history menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_dtmf_info menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_transport_websocket menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_xpidf_body_generator menuselect.makeopts; \
-    menuselect/menuselect --disable res_prometheus menuselect.makeopts; \
+    menuselect/menuselect --enable res_prometheus menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_pidf_body_generator menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_mwi_body_generator menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_empty_info menuselect.makeopts; \
@@ -181,7 +181,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_pjsip_authenticator_digest menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_exten_state menuselect.makeopts; \
     menuselect/menuselect --disable res_pjsip_rfc3326 menuselect.makeopts; \
-    menuselect/menuselect --disable res_pjsip_logger menuselect.makeopts; \
+    menuselect/menuselect --enable res_pjsip_logger menuselect.makeopts; \
     make; \
     make install; \
     make samples; \
