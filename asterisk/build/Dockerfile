@@ -67,7 +67,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_xmpp menuselect.makeopts; \
     menuselect/menuselect --disable res_stir_shaken menuselect.makeopts; \
     menuselect/menuselect --disable res_ael_share menuselect.makeopts; \
-    menuselect/menuselect --disable res_parking menuselect.makeopts; \
+    menuselect/menuselect --enable res_parking menuselect.makeopts; \
     menuselect/menuselect --disable res_agi menuselect.makeopts; \
     menuselect/menuselect --disable res_calendar_caldav menuselect.makeopts; \
     menuselect/menuselect --disable res_aeap menuselect.makeopts; \
