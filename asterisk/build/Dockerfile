@@ -57,8 +57,8 @@ RUN set -ex; \
     menuselect/menuselect --disable codec_speex menuselect.makeopts; \
     menuselect/menuselect --disable format_ogg_vorbis menuselect.makeopts; \
     echo "disable unused modules/apps"; \
-    menuselect/menuselect --disable chan_iax2 menuselect.makeopts; \
-    menuselect/menuselect --disable chan_motif menuselect.makeopts; \
+    menuselect/menuselect --enable chan_iax2 menuselect.makeopts; \
+    menuselect/menuselect --enable chan_motif menuselect.makeopts; \
     menuselect/menuselect --disable chan_unistim menuselect.makeopts; \
     menuselect/menuselect --disable chan_console menuselect.makeopts; \
     menuselect/menuselect --disable chan_audiosocket menuselect.makeopts; \
@@ -69,7 +69,7 @@ RUN set -ex; \
     menuselect/menuselect --disable res_xmpp menuselect.makeopts; \
     menuselect/menuselect --disable res_stir_shaken menuselect.makeopts; \
     menuselect/menuselect --disable res_ael_share menuselect.makeopts; \
-    menuselect/menuselect --disable res_parking menuselect.makeopts; \
+    menuselect/menuselect --enable res_parking menuselect.makeopts; \
     menuselect/menuselect --disable res_agi menuselect.makeopts; \
     menuselect/menuselect --disable res_calendar_caldav menuselect.makeopts; \
     menuselect/menuselect --disable res_aeap menuselect.makeopts; \
