@@ -240,7 +240,8 @@ COPY conf/ari.conf /etc/asterisk
 COPY conf/extensions.conf /etc/asterisk
 COPY conf/http.conf /etc/asterisk
 COPY conf/modules.conf /etc/asterisk
-COPY conf/sip.conf /etc/asterisk
+COPY conf/pjproject.conf /etc/asterisk
+COPY conf/pjsip.conf /etc/asterisk
 # if need curl for Global Web
 # RUN set -ex; \
 #     apt install -y --no-install-recommends ca-certificates;
