@@ -5,6 +5,10 @@ Use VSCode or cmder to build the asterisk image:
 * `cd build`
 * `docker build -t cartheur/asterisk .`
 
+If trying to sort modules - both in terms of configuration and installing - use:
+
+* `docker build --no-cache -t cartheur/asterisk .`
+
 Navigate to the [k8s](/k8s/README.md) directory to run it in conjunction with:
 
 * [Prometheus](https://github.com/prometheus/prometheus)
