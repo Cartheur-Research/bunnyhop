@@ -15,4 +15,4 @@ Bunnyhop uses [asterisk](https://github.com/Cartheur-Research/asterisk) to perfo
 
 _Development status_
 
-Changing options in the build has caused container issues.
+Changing options in the build has caused container issues. Issue is with setting-up what is required for modules loaded via `modules.conf`.
